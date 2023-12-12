@@ -6,8 +6,8 @@ BS_predictor is a supervised learning method designed to predict binding site re
 
 **Authors**:
 - Denis Expósito Navarro (deexna4@gmail.com)
-- Marta Alonso Caubilla 
-- Yolanda Andrés López
+- Marta Alonso Caubilla (marta.alonso07@estudiant.upf.edu)
+- Yolanda Andrés López (yolanda.andres01@estudiant.upf.edu)
 
 **Version**: 2.0.0 (December 2023)
 - Fix installation issues (setup.py)
