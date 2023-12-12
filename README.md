@@ -4,6 +4,8 @@
 
 BS_predictor is a supervised learning method designed to predict binding site residues within a protein structure. Leveraging machine learning techniques, the model analyzes the properties and interactions of residues to make accurate predictions. This Python program is tailored for **UNIX-like** environments.
 
+![Predicted Binding Site](BS_predictor/images/schema.png)
+
 **Authors**:
 - Denis Expósito Navarro (deexna4@gmail.com)
 - Marta Alonso Caubilla (marta.alonso07@estudiant.upf.edu)
