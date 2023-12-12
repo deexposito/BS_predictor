@@ -2,11 +2,16 @@
 
 ------------------------------------
 **Authors**:
-- Denis Expósito Navarro
-- Marta Alonso Caubilla
+- Denis Expósito Navarro (deexna4@gmail.com)
+- Marta Alonso Caubilla 
 - Yolanda Andrés López
 
-**Version**: 1.1.0 (December 2023)
+**Version**: 2.0.0 (December 2023)
+- Fix installation issues (setup.py)
+- Provide a script for previous data preparation (+ option to modify it and extract different training files) and the binding site residue list file generated as csv.
+- Provide a script for the generation of the training feature matrix and the feature matrix file as csv (feature_matrix.py)
+- Provide script to train the model with the feature matrix with GridSearch and save the best model to use it in the main script (BSmodel.pkl)
+
 
 BS_predictor is a supervised learning method designed to predict binding site residues within a protein structure. Leveraging machine learning techniques, the model analyzes the properties and interactions of residues to make accurate predictions. This Python program is tailored for **UNIX-like** environments.
 
@@ -18,10 +23,11 @@ The model requires the following packages:
 | -------------- | ------- |
 | pandas         | >= 2.0   |
 | biopython      | >= 1.81  |
-| scikit-learn   | >= 1.2.2 |
+| scikit-learn   | >= 1.3.2 |
 | numpy          | >= 1.23.4|
 | networkx       | >= 3.1   |
 | scipy          | >= 1.10.1|
+| joblib          | >= 1.3.2|
 
 To install these packages, run:
 
@@ -43,7 +49,6 @@ available in the command line.
 
 To make `BS_predictor` executable from any location in the command line, you can add its directory to your system's PATH.
 Add the following line to your shell configuration file (e.g., `~/.bashrc` or `~/.zshrc`):
-
 
     export PATH="/path/to/BS_predictor:$PATH"
 
@@ -71,9 +76,7 @@ For the protein structure 4ins.pdb (blue) the following residues in the predicte
 are obtained:
 
 - 4ins_A_GLY_1
-- 4ins_A_GLN_5
 - 4ins_B_GLY_23 
-- 4ins_C_GLY_1
 - 4ins_D_GLY_23 
 
 ![Predicted Binding Site](BS_predictor/images/4ins_prediction.png)
